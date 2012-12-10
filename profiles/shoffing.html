@@ -43,6 +43,7 @@
 		{ 
 			$("span").each(function() {
 				$(this).css("font-size", 10 + Math.random() * 30);
+				$(this).css("color", "rgb(" + (Math.random() * 255) + "," + (Math.random() * 255) + "," + (Math.random() * 255) + ")");
 			});
 
 			setTimeout(update, 50);
