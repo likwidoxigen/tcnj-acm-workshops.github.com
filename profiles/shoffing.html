@@ -1,7 +1,51 @@
 <head>
-
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 
 <body>
-	Steve's page. Steve is THE BEST. Is fact.
+	<p id="blah">
+		Steve's page. Steve is THE BEST. Is fact.<br/>
+		Steve's page. Steve is THE BEST. Is fact.<br/>
+		Steve's page. Steve is THE BEST. Is fact.<br/>
+		Steve's page. Steve is THE BEST. Is fact.<br/>
+		Steve's page. Steve is THE BEST. Is fact.<br/>
+		Steve's page. Steve is THE BEST. Is fact.<br/>
+		Steve's page. Steve is THE BEST. Is fact.<br/>
+		Steve's page. Steve is THE BEST. Is fact.<br/>
+		Steve's page. Steve is THE BEST. Is fact.<br/>
+		Steve's page. Steve is THE BEST. Is fact.<br/>
+		Steve's page. Steve is THE BEST. Is fact.<br/>
+		Steve's page. Steve is THE BEST. Is fact.<br/>
+		Steve's page. Steve is THE BEST. Is fact.<br/>
+		Steve's page. Steve is THE BEST. Is fact.<br/>
+		Steve's page. Steve is THE BEST. Is fact.<br/>
+		Steve's page. Steve is THE BEST. Is fact.<br/>
+		Steve's page. Steve is THE BEST. Is fact.<br/>
+		Steve's page. Steve is THE BEST. Is fact.<br/>
+		Steve's page. Steve is THE BEST. Is fact.
+	</p>
+
+	<script>
+		$(document).ready(function() {
+			var blah = $("#blah").text();
+
+			for(var i = 0; i < blah.length; i++)
+			{
+				$("body").append("<span>" + blah.substring(i, i+1) + "</span>");
+			}
+
+			$("#blah").hide();
+
+			update();
+		});
+
+		function update()
+		{ 
+			$("span").each(function() {
+				$(this).css("font-size", 10 + Math.random() * 30);
+			});
+
+			setTimeout(update, 50);
+		}
+	</script>
 </body>
